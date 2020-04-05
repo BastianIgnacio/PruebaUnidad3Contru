@@ -82,6 +82,24 @@ public class Cliente {
         }
     }
     
+    public void pagarTodasMultas()
+    {
+        for(Multa m : this.multas)
+        {
+            m.pagar();
+        }
+    }
+    
+    public int getMontoDeuda()
+    {
+        int total = 0 ;
+        for(Multa m : this.multas)
+        {
+            total = total +m.getMonto();
+        }
+        return total;
+    }
+    
     
     
     
